@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5a6-FM-TKn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Main" id="BYZ-38-t0r" customClass="MainViewController" customModule="MemoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn4-6d-Sgj">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <state key="normal" title="Delegation Reference Cycle"/>
+                                <connections>
+                                    <action selector="delegationReferenceCycleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Puu-pQ-Ate"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q61-cq-iaf">
+                                <rect key="frame" x="20" y="134" width="335" height="30"/>
+                                <state key="normal" title="Closure (as var) Reference Cycle "/>
+                                <connections>
+                                    <action selector="closureAsVarReferenceCycleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="re3-zG-aJb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhf-R3-ich">
+                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <state key="normal" title="Class Reference Cycle"/>
+                                <connections>
+                                    <action selector="classReferenceCycleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jiH-RL-Ym7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QL-My-pSM">
+                                <rect key="frame" x="20" y="234" width="335" height="30"/>
+                                <state key="normal" title="Closure (as parameter) Reference Cycle"/>
+                                <connections>
+                                    <action selector="closureAsParameterReferenceCycleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nx0-Ic-Hxt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q61-cq-iaf" firstAttribute="leading" secondItem="zn4-6d-Sgj" secondAttribute="leading" id="4YO-O7-Eva"/>
+                            <constraint firstItem="rhf-R3-ich" firstAttribute="top" secondItem="q61-cq-iaf" secondAttribute="bottom" constant="20" id="Aej-qe-C2r"/>
+                            <constraint firstItem="rhf-R3-ich" firstAttribute="trailing" secondItem="zn4-6d-Sgj" secondAttribute="trailing" id="EgT-rK-IbE"/>
+                            <constraint firstItem="2QL-My-pSM" firstAttribute="leading" secondItem="zn4-6d-Sgj" secondAttribute="leading" id="LeM-GE-f7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zn4-6d-Sgj" secondAttribute="trailing" constant="20" id="Z68-N3-6gm"/>
+                            <constraint firstItem="rhf-R3-ich" firstAttribute="leading" secondItem="zn4-6d-Sgj" secondAttribute="leading" id="bQD-os-7Bk"/>
+                            <constraint firstItem="q61-cq-iaf" firstAttribute="trailing" secondItem="zn4-6d-Sgj" secondAttribute="trailing" id="eLP-ux-HuI"/>
+                            <constraint firstItem="zn4-6d-Sgj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fd1-9A-VaZ"/>
+                            <constraint firstItem="2QL-My-pSM" firstAttribute="trailing" secondItem="zn4-6d-Sgj" secondAttribute="trailing" id="gn9-7f-4or"/>
+                            <constraint firstItem="zn4-6d-Sgj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lbM-h7-SsE"/>
+                            <constraint firstItem="2QL-My-pSM" firstAttribute="top" secondItem="rhf-R3-ich" secondAttribute="bottom" constant="20" id="off-xm-Kx9"/>
+                            <constraint firstItem="q61-cq-iaf" firstAttribute="top" secondItem="zn4-6d-Sgj" secondAttribute="bottom" constant="20" id="rZl-Yf-zNW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ukg-7u-J1i"/>
+                    <connections>
+                        <segue destination="JlU-GZ-ws3" kind="show" identifier="DelegationReferenceCycle" id="ZR4-jm-TuI"/>
+                        <segue destination="NYD-pN-ICf" kind="show" identifier="ClosureReferenceCycleAsVar" id="hPE-RM-LYk"/>
+                        <segue destination="Tlg-hv-Hk7" kind="show" identifier="ClassReferenceCycle" id="tJu-zN-cz8"/>
+                        <segue destination="9Zc-h7-FyP" kind="show" identifier="ClosureReferenceCycleAsParameter" id="AGW-V2-kDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="18"/>
+        </scene>
+        <!--Closure Reference Cycle as Var-->
+        <scene sceneID="82i-IF-1sa">
+            <objects>
+                <viewController title="Closure Reference Cycle as Var" id="NYD-pN-ICf" customClass="ClosureReferenceCycleAsVarViewController" customModule="MemoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F4e-AB-J8E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulm-Ej-zIe">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="NYD-pN-ICf" eventType="touchUpInside" id="wJA-Tu-J8L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ulm-Ej-zIe" firstAttribute="centerX" secondItem="F4e-AB-J8E" secondAttribute="centerX" id="nCo-vB-Lff"/>
+                            <constraint firstItem="ulm-Ej-zIe" firstAttribute="centerY" secondItem="F4e-AB-J8E" secondAttribute="centerY" id="vdv-Nc-qjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fIf-mv-rOs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A58-jn-j50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2468" y="18"/>
+        </scene>
+        <!--Closure Reference Cycle as Parameter-->
+        <scene sceneID="pWG-6U-kBE">
+            <objects>
+                <viewController title="Closure Reference Cycle as Parameter" id="9Zc-h7-FyP" customClass="ClosureReferenceCycleAsParameterViewController" customModule="MemoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ozt-j2-Ndz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stU-10-Yb6">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="9Zc-h7-FyP" eventType="touchUpInside" id="VCs-wy-ZLg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="stU-10-Yb6" firstAttribute="centerY" secondItem="Ozt-j2-Ndz" secondAttribute="centerY" id="Rc6-ac-enZ"/>
+                            <constraint firstItem="stU-10-Yb6" firstAttribute="centerX" secondItem="Ozt-j2-Ndz" secondAttribute="centerX" id="YFX-av-B4i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mHY-7a-rue"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70N-EC-TGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3207" y="18"/>
+        </scene>
+        <!--Class Reference Cycle-->
+        <scene sceneID="mme-T6-czA">
+            <objects>
+                <viewController title="Class Reference Cycle" id="Tlg-hv-Hk7" customClass="ClassReferenceCycleViewController" customModule="MemoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P89-bP-xNu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip2-IQ-ylc">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Tlg-hv-Hk7" eventType="touchUpInside" id="ygu-Nw-JBJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ip2-IQ-ylc" firstAttribute="centerX" secondItem="P89-bP-xNu" secondAttribute="centerX" id="Vw6-WL-WlZ"/>
+                            <constraint firstItem="Ip2-IQ-ylc" firstAttribute="centerY" secondItem="P89-bP-xNu" secondAttribute="centerY" id="dTl-gb-1D5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sgx-lT-lwZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNL-2T-cij" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455" y="738"/>
+        </scene>
+        <!--Delegation Reference Cycle-->
+        <scene sceneID="fal-vb-MhV">
+            <objects>
+                <viewController title="Delegation Reference Cycle" id="JlU-GZ-ws3" customClass="DelegationReferenceCycleViewController" customModule="MemoryManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LrX-lB-qmf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jew-zL-q2w">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="JlU-GZ-ws3" eventType="touchUpInside" id="a7l-Um-OLN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jew-zL-q2w" firstAttribute="centerY" secondItem="LrX-lB-qmf" secondAttribute="centerY" id="bRO-2F-YOT"/>
+                            <constraint firstItem="Jew-zL-q2w" firstAttribute="centerX" secondItem="LrX-lB-qmf" secondAttribute="centerX" id="t6B-uS-llT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LPB-1b-FvP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUJ-sh-73o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2468" y="-743"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1kC-hm-qzR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5a6-FM-TKn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G2N-qY-Bcc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1HR-Be-dBw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAq-5b-fW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="18"/>
+        </scene>
+    </scenes>
+</document>
